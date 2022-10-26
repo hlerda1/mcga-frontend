@@ -3,9 +3,8 @@ import { SET_LOADING, SET_PRODUCTS, DISMISS_LOADING } from "./types";
 export const setProducts = (products) => {
     return {
         type: SET_PRODUCTS,
-        payload: {
-            products: products,
-        },
+        payload: products
+        
     };
 };
 
