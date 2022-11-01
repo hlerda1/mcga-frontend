@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getProducts } from "../../redux/Products/thunks";
 // import Link from '../../components/Link/link';
+import styles from './products.module.css';
 
 
 const Products = () => {
@@ -29,9 +30,18 @@ if (isLoadingProducts) return <div>cargando</div>
     // </div>
   //  <div> {products?.map((product) => <div>{product.name}</div>)}</div>
    return (
-    <div>
-      {products?.map((product) => <h2>{product.name}</h2>
-      )}
+    <div>  
+      <table className={styles}>    
+        <tr><th>Id Code</th><th>Name</th><th>Price</th><th>Stock</th></tr>
+        {products.map((product) =>         
+          <tr>
+            <td>{product.id}</td>
+            <td>{product.name}</td>
+            <td>{product.price}</td>
+            <td>{product.stock}</td>
+          </tr>
+        )}      
+      </table>
     </div>
   );
 }
