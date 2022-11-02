@@ -1,10 +1,10 @@
 import React from 'react'
 
-const sharedInput = ({type, placeholder, name}) => {
+const SharedInput = ({register, type, placeholder, name}) => {
     return (
-      <input type={type} placeholder={placeholder} name={name}>
+      <input {...register(`${name}`)} type={type} placeholder={placeholder} name={name}>
       </input>
     );
   };
   
-  export default sharedInput;
+  export default SharedInput;

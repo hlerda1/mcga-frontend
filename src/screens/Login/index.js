@@ -10,7 +10,7 @@ const Login = () => {
       <div>Login</div>
       {/* <Link text={'Ingresar'} to={'/'}  /> */}
       {/* <Form></Form> */}
-      <SharedForm></SharedForm>
+      <SharedForm/>
     </div>
   );
 };
